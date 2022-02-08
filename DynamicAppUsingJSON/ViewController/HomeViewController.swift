@@ -7,23 +7,18 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, CoordinatorBoard {
 
+    @IBOutlet weak var userNameTextField: UILabel!
+    var userName: String?
+    weak var homeCordinator: HomeCoordinator?
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.navigationItem.hidesBackButton = true
+        userNameTextField.text = userName
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func logoutUserAction(_ sender: Any) {
+        homeCordinator?.navigateToLoginVC()
     }
-    */
-
 }

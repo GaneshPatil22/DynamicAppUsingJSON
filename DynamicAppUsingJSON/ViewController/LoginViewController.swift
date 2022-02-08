@@ -1,29 +1,28 @@
 //
-//  LoginViewController.swift
+//  ViewController.swift
 //  DynamicAppUsingJSON
 //
-//  Created by Patil, Ganesh on 08/02/22.
+//  Created by Patil, Ganesh on 07/02/22.
 //
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, CoordinatorBoard {
 
+    weak var mainCoordinator: LoginCoordinator?
+    @IBOutlet weak var userNameTestFiled: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func openResetPasswordVCAction(_ sender: Any) {
+        mainCoordinator?.configureResetPasswordVC()
     }
-    */
 
+    @IBAction func performLoginAction(_ sender: Any) {
+        let name: String = userNameTestFiled.text ?? ""
+        mainCoordinator?.configureHomeVC(userName: name)
+    }
 }
+

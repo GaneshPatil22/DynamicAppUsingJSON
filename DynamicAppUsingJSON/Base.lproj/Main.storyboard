@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZUf-cd-fV5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -9,22 +9,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DynamicAppUsingJSON" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="BYZ-38-t0r" customClass="LoginViewController" customModule="DynamicAppUsingJSON" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dynamic App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pxV-PC-zfA">
-                                <rect key="frame" x="99" y="114" width="216.5" height="88"/>
+                                <rect key="frame" x="99" y="70" width="216.5" height="88"/>
                                 <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fmv-Hm-919">
-                                <rect key="frame" x="16" y="289" width="382" height="172"/>
+                                <rect key="frame" x="16" y="267" width="382" height="172"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ayO-Ku-7OU">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="51"/>
@@ -32,7 +32,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hRM-oM-wgc">
                                                 <rect key="frame" x="0.0" y="0.0" width="150" height="51"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="150" id="sdr-yx-p9b"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="sdr-yx-p9b"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="15"/>
                                                 <nil key="textColor"/>
@@ -51,7 +51,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M7t-st-hoS">
                                                 <rect key="frame" x="0.0" y="0.0" width="150" height="51"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="150" id="SdU-FI-6Jj"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="SdU-FI-6Jj"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="15"/>
                                                 <nil key="textColor"/>
@@ -71,6 +71,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="191" height="50"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Reset Password"/>
+                                                <connections>
+                                                    <action selector="openResetPasswordVCAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GoC-q6-RRv"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bbr-qr-3Qj">
                                                 <rect key="frame" x="191" y="0.0" width="191" height="50"/>
@@ -78,6 +81,9 @@
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Login"/>
+                                                <connections>
+                                                    <action selector="performLoginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HG2-RD-WXO"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -99,59 +105,41 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="MvG-4Y-QzY"/>
+                    <connections>
+                        <outlet property="userNameTestFiled" destination="xQn-8h-hBM" id="lkV-nh-RE4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="114.50892857142857"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="MtO-n5-f24">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZUf-cd-fV5" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="W29-un-sgM">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="bma-8u-vWl"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BwK-MX-Zeu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="114.50892857142857"/>
-        </scene>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="AV9-IO-ccx">
             <objects>
-                <viewController id="bS7-qC-21w" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="bS7-qC-21w" customClass="HomeViewController" customModule="DynamicAppUsingJSON" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jwR-2f-q48">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Zj-QU-Vnm">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Zj-QU-Vnm">
                                 <rect key="frame" x="10" y="64" width="99.5" height="25.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="99.5" id="fcJ-fn-Ksp"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="25"/>
                                 <color key="textColor" systemColor="systemTealColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ganesh" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="17Z-yY-lVN">
-                                <rect key="frame" x="119.5" y="64" width="204.5" height="25.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Ganesh" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="17Z-yY-lVN">
+                                <rect key="frame" x="119.5" y="64" width="205" height="25.5"/>
                                 <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8pC-02-Tch">
-                                <rect key="frame" x="334" y="61.5" width="70" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="3A0-os-sbk"/>
-                                </constraints>
+                                <rect key="frame" x="334.5" y="61.5" width="69.5" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Logout"/>
+                                <connections>
+                                    <action selector="logoutUserAction:" destination="bS7-qC-21w" eventType="touchUpInside" id="Sbl-nf-qcp"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KYD-dv-9wX"/>
@@ -167,15 +155,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fJ7-jZ-Hwc"/>
+                    <connections>
+                        <outlet property="userNameTextField" destination="17Z-yY-lVN" id="3hP-2y-obI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Zq-0h-VcE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1817" y="115"/>
         </scene>
-        <!--View Controller-->
+        <!--Reset Password View Controller-->
         <scene sceneID="3Ox-lr-iCR">
             <objects>
-                <viewController id="2ah-wW-a0M" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ResetPasswordViewController" id="2ah-wW-a0M" customClass="ResetPasswordViewController" customModule="DynamicAppUsingJSON" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="97m-yB-oWf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -189,7 +180,7 @@
                                 <rect key="frame" x="143.5" y="437.5" width="127" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="CqV-Mu-oPY"/>
-                                    <constraint firstAttribute="width" constant="127" id="fj8-rH-Zfy"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="127" id="fj8-rH-Zfy"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Reset Password"/>
@@ -197,7 +188,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ub9-D2-Izr">
                                 <rect key="frame" x="20" y="395.5" width="50" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="Jbh-r7-0Tm"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="Jbh-r7-0Tm"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
