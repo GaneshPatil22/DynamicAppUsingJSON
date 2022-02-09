@@ -7,13 +7,13 @@
 
 import UIKit
 
-enum ViewControllerType {
-    case Login
-    case Home
+enum CoordinatorType: Int {
+    case Login = 1
+    case Home = 2
 }
 
 class ChildCoordinatorFactory {
-    static func getCoordinator(with navigationVC: UINavigationController, type: ViewControllerType) -> ChildrenCoordinator {
+    static func getCoordinator(with navigationVC: UINavigationController, type: CoordinatorType) -> ChildrenCoordinator {
         switch type {
         case .Home:
             return HomeCoordinator(with: navigationVC)

@@ -1,0 +1,15 @@
+{
+    "MainConfig": {
+        "FirstScreen": {
+            "type": 1
+        },
+        "LoginConfig": {
+            "AppName": "Dynamic App",
+            "LoginButtonTitle": "Login",
+            "ResetButtonTitle": "Reset Password"
+        },
+        "HomeConfig": {
+            "LogoutButtonTitle": "Logout"
+        }
+    }
+}

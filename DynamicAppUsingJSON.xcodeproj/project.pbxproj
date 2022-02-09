@@ -20,6 +20,8 @@
 		09AA032427B2848100014585 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AA032327B2848100014585 /* HomeCoordinator.swift */; };
 		09AA032727B295ED00014585 /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AA032627B295ED00014585 /* Factory.swift */; };
 		09AA032927B29D4800014585 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AA032827B29D4800014585 /* MainCoordinator.swift */; };
+		09AA032C27B3862300014585 /* MainConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = 09AA032B27B3862300014585 /* MainConfig.json */; };
+		09AA032E27B3982D00014585 /* JsonReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AA032D27B3982D00014585 /* JsonReader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		09AA032327B2848100014585 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		09AA032627B295ED00014585 /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
 		09AA032827B29D4800014585 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		09AA032B27B3862300014585 /* MainConfig.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MainConfig.json; sourceTree = "<group>"; };
+		09AA032D27B3982D00014585 /* JsonReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonReader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,7 @@
 		09AA030227B157F100014585 /* DynamicAppUsingJSON */ = {
 			isa = PBXGroup;
 			children = (
+				09AA032A27B385F800014585 /* Resource */,
 				09AA032527B295D900014585 /* Factory */,
 				09AA031E27B241B500014585 /* Coordinator */,
 				09AA031727B23ACC00014585 /* ViewController */,
@@ -110,6 +115,15 @@
 				09AA032627B295ED00014585 /* Factory.swift */,
 			);
 			path = Factory;
+			sourceTree = "<group>";
+		};
+		09AA032A27B385F800014585 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				09AA032B27B3862300014585 /* MainConfig.json */,
+				09AA032D27B3982D00014585 /* JsonReader.swift */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,6 +186,7 @@
 			files = (
 				09AA031027B157F300014585 /* LaunchScreen.storyboard in Resources */,
 				09AA030D27B157F300014585 /* Assets.xcassets in Resources */,
+				09AA032C27B3862300014585 /* MainConfig.json in Resources */,
 				09AA030B27B157F100014585 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -187,6 +202,7 @@
 				09AA032027B241CF00014585 /* LoginCoordinator.swift in Sources */,
 				09AA030827B157F100014585 /* LoginViewController.swift in Sources */,
 				09AA032927B29D4800014585 /* MainCoordinator.swift in Sources */,
+				09AA032E27B3982D00014585 /* JsonReader.swift in Sources */,
 				09AA031D27B23B1E00014585 /* ResetPasswordViewController.swift in Sources */,
 				09AA030427B157F100014585 /* AppDelegate.swift in Sources */,
 				09AA032727B295ED00014585 /* Factory.swift in Sources */,

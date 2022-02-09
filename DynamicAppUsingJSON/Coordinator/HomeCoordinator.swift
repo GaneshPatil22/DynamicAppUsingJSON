@@ -11,7 +11,7 @@ class HomeCoordinator: ChildrenCoordinator {
     weak var parentCoordinator: ParentCoordinator?
     
     var navigationController: UINavigationController
-    var userName: String = ""
+    var userName: String = "Ganesh"
     
     init(with navigationVC: UINavigationController) {
         self.navigationController = navigationVC

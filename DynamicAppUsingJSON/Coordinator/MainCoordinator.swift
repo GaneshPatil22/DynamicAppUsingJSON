@@ -18,7 +18,14 @@ class MainCoordinator: ParentCoordinator {
     }
     
     func configureRootVC() {
-        let loginCord = ChildCoordinatorFactory.getCoordinator(with: navigationController, type: .Login)
+        var coordinatorType: CoordinatorType?
+        JSONReader.shared.fetchConfig {
+            let dict = JSONReader.shared.configDict
+            if dict.isEmpty == false, let mainConfig = dict["MainConfig"] as? [String: Any], let firstScreen = mainConfig["FirstScreen"] as? [String: Any], let type = firstScreen["type"] as? Int, let enumType = CoordinatorType(rawValue: type) {
+                coordinatorType = enumType
+            }
+        }
+        let loginCord = ChildCoordinatorFactory.getCoordinator(with: navigationController, type: coordinatorType ?? .Login)
         self.childCoordinators.append(loginCord)
         loginCord.parentCoordinator = self
         loginCord.configureChildrenVC()
