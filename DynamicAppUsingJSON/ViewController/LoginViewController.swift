@@ -14,6 +14,7 @@ class LoginViewController: UIViewController, CoordinatorBoard {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .red
     }
 
     @IBAction func openResetPasswordVCAction(_ sender: Any) {
