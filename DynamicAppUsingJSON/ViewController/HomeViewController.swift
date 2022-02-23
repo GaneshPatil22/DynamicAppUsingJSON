@@ -16,7 +16,6 @@ class HomeViewController: UIViewController, CoordinatorBoard {
         super.viewDidLoad()
         self.navigationItem.hidesBackButton = true
         userNameTextField.text = userName
-        view.backgroundColor = .blue
     }
     
     @IBAction func logoutUserAction(_ sender: Any) {
